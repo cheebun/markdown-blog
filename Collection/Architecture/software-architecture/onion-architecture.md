@@ -18,7 +18,7 @@
 
 然而，洋葱架构还告诉我们，企业应用中存在着不止两个层次，它在业务逻辑中加入了一些在领域驱动设计的过程中被识别出来的层次：
 
-![](/Assets/Architecture/onion-architecture/001.png)
+![](../../../Assets/Collection/Architecture/software-architecture/onion-architecture/001.png)
 
 此外，它明确了端口和适配器架构中关于依赖方向的暗示：
 

@@ -34,7 +34,7 @@ SDK 的方案实现简单，但是规模较大的系统会面临升级推广困�
 
 - X翼战机 xwing：执行登陆请求。
 
-![](/Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/001.png)
+![](../../Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/001.png)
 
 > 如图所示，我们使用了 Label 对三个应用进行了标识：org 和 class。在执行网络策略时，我们会使用这两个标签识别负载。
 
@@ -195,7 +195,7 @@ Ship landed
 
 从结果来看，两种 ”战机“（Pod 负载）都可以访问 deathstar 服务。
 
-![](/Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/002.png)
+![](../../Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/002.png)
 
 
 此时执行网络策略：
@@ -206,7 +206,7 @@ kubectl apply -f native/networkpolicy.yaml
 
 再次尝试”登陆“，xwing 的登陆请求会停在那（需要使用 ctrl+c 退出，或者请求时加上 `--connect-timeout 2`）。
 
-![](/Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/003.png)
+![](../../Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/003.png)
 
 ### 思考
 
@@ -251,7 +251,7 @@ __eBPF 是什么？__
 >
 > 将 Linux 内核变成可编程之后，就能基于现有的（而非增加新的）抽象层来打造更加智能、 功能更加丰富的基础设施软件，而不会增加系统的复杂度，也不会牺牲执行效率和安全性。
 
-![](/Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/004.png)
+![](../../Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/004.png)
 
 我们来看下 Cilium 的网络策略：
 
@@ -428,4 +428,4 @@ Ship landed
 
 这回返回了 Access denied，说明 L7 层的规则生效了。
 
-![](/Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/005.png)
+![](../../Assets/Collection/Operation/enhancing-kubernetes-network-security-with-cilium/005.png)

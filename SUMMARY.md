@@ -1,7 +1,5 @@
 # Summary
 
-- [简介](Introduction.md)
-
 - 开发
 
     - 前端开发
@@ -14,61 +12,58 @@
 
         - 2018-06-08 [函数参数 null 处理方法](./Articles/Develop/fed/TypeScript/handling-method-when-function-parameter-is-null.md)
 
-        - 2018-06-07 [TypeScript 配置选项](文章/开发/前端开发/开发语言/TypeScript/配置选项.md)
-        
-        - 2018-06-07 [在 TypeScript 中使用 Webpack import 的绝对路径方法](文章/开发/前端开发/开发语言/TypeScript/中使用%20Webpack%20import%20的绝对路径.md)
+        - 2018-06-07 [TypeScript 配置选项](./Articles/Develop/fed/TypeScript/typescript-config-options.md)
 
-        - 2018-06-07 [使用 window.crypto.getRandomValues 取代不案例的 Math.random](文章/开发/前端开发/开发语言/TypeScript/使用%20window.crypto.getRandomValues%20取代不安全的%20Math.random.md)
+        - 2018-06-07 [在 TypeScript 中使用 Webpack import 的绝对路径方法](./Articles/Develop/fed/TypeScript/absolute-path-with-webpack-import.md)
 
-        - 2018-06-06 [基础类型](文章/开发/前端开发/开发语言/TypeScript/基础类型.md)
+        - 2018-06-07 [使用 window.crypto.getRandomValues 取代不安全的 Math.random](./Articles/Develop/fed/TypeScript/replace-math-random-with-crypto-getrandomvalues.md)
 
-        - 2018-05-10 [开始使用新的 CSS Typed Object Model](文章/开发/前端开发/开发语言/JavaScript/开始使用新的%20CSS%20Typed%20Object%20Model.md)
+        - 2018-06-06 [基础类型](./Articles/Develop/fed/TypeScript/basic-types.md)
 
-        - 2018-05-10 [作用域](文章/开发/前端开发/开发语言/JavaScript/作用域.md)
+        - 2018-05-10 [开始使用新的 CSS Typed Object Model](./Articles/Develop/fed/JavaScript/start-using-new-css-typed-object-model.md)
 
-        - 2018-06-06 [从 create-react-app 学习 CSS3 360度旋转](文章/开发/前端开发/开发语言/HTML%20%26%20CSS/CSS3%20从%20create-react-app%20学习360度旋转动画.md)
+        - 2018-05-10 [作用域](./Articles/Develop/fed/JavaScript/scope.md)
 
-        - 2018-05-10 [微信小程序添加底部导航](add-topbar-to-wechat-mini-program.md)
+        - 2018-06-06 [从 create-react-app 学习 CSS3 360度旋转](./Articles/Develop/fed/HTML/css3-360-degree-rotation-from-create-react-app.md)
 
-        - 2018-06-06 [React class 中的事件 4 种使用 this 的方法](文章/开发/前端开发/前端框架/React/React%20class%20中的事件%204%20种使用%20this%20的方法.md)
+        - 2018-05-10 [微信小程序添加底部导航](./Articles/Develop/fed/MiniProgram/add-topbar-to-wechat-mini-program.md)
 
-        - 2018-06-06 [从 antd Menu 学习父组件获取子组件 key 研究](文章/开发/前端开发/前端框架/React/从%20antd%20Menu%20学习父组件获取子组件%20key%20研究.md)
+        - 2018-06-06 [React class 中的事件 4 种使用 this 的方法](./Articles/Develop/fed/React/react-class-event-four-ways-to-use-this.md)
 
-        - 2018-06-06 [16.4.0 生命周期一览和旧的生命周期回顾](文章/开发/前端开发/前端框架/React/16.4.0%20新版生命周期一览和旧的生命周期回顾.md)
+        - 2018-06-06 [从 antd Menu 学习父组件获取子组件 key 研究](./Articles/Develop/fed/React/learning-parent-child-key-from-antd-menu.md)
 
-        - 2018-05-10 [导航菜单激活时添加 className](文章/开发/前端开发/前端框架/React/导航菜单经过添加激活%20className.md)
+        - 2018-06-06 [16.4.0 生命周期一览和旧的生命周期回顾](./Articles/Develop/fed/React/react-164-new-lifecycle-overview.md)
 
-        - 2018-05-10 [React Router 404 错误拦截处理](文章/开发/前端开发/前端框架/React/React%20Router%20404%20错误拦截处理.md)
+        - 2018-05-10 [导航菜单激活时添加 className](./Articles/Develop/fed/React/navigation-menu-active-classname.md)
+
+        - 2018-05-10 [React Router 404 错误拦截处理](./Articles/Develop/fed/React/react-router-404-error-handling.md)
 
   - __后端开发__
- 
+
 
   - __开发工具__
     - __编辑器__
       - __Sublime Text__
-        - TODO [自用插件](文章/开发/开发工具/编辑器/Sublime%20Text/自用插件.md)
-        - 2018-06-08 [快捷键大全](文章/开发/开发工具/编辑器/Sublime%20Text/主题配置.md)
-        - 2018-06-08 [注册码](文章/开发/开发工具/编辑器/Sublime%20Text/注册码.md)
-        - 2018-06-07 [自用配置](文章/开发/开发工具/编辑器/Sublime%20Text/自用配置.md)
-        - 2018-06-07 [主题配置](文章/开发/开发工具/编辑器/Sublime%20Text/主题配置.md)
-        - 2018-06-06 [让 JSX 支持 Emmet](文章/开发/开发工具/编辑器/Sublime%20Text/让%20JSX%20支持%20Emmet.md)
+        - TODO [自用插件](./Articles/Develop/tool/editors/sublime-text/personal-plugins.md)
+        - 2018-06-08 [快捷键大全](./Articles/Develop/tool/editors/sublime-text/keyboard-shortcuts.md)
+        - 2018-06-07 [自用配置](./Articles/Develop/tool/editors/sublime-text/personal-config.md)
+        - 2018-06-07 [主题配置](./Articles/Develop/tool/editors/sublime-text/theme-config.md)
+        - 2018-06-06 [让 JSX 支持 Emmet](./Articles/Develop/tool/editors/sublime-text/jsx-emmet-support.md)
       - __VSCode__
-        - 2018-06-09 [JavaScript 语法开启智能提示](文章/开发/开发工具/编辑器/VSCode/JavaScript%20语法开启智能提示.md)
-        - 2018-06-09 [快捷键大全](文章/开发/开发工具/编辑器/VSCode/快捷键大全.md)
-        - 2018-06-06 [TypeScript 自带格式化配置](文章/开发/开发工具/编辑器/VSCode/TypeScript%20自带格式化配置.md)
-        - 2018-06-06 [让 JSX 后缀支持 Emmet](文章/开发/开发工具/编辑器/VSCode/让%20JSX%20后缀支持%20Emmet.md)
-        - 2018-06-06 [Prettier Now 格式化配置](文章/开发/开发工具/编辑器/VSCode/Prettier%20Now%20格式化配置.md)
-        - 2018-06-06 [Prettier 格式化配置](文章/开发/开发工具/编辑器/VSCode/Prettier%20格式化配置.md)
+        - 2018-06-09 [JavaScript 语法开启智能提示](./Articles/Develop/tool/editors/VSCode/javascript-intellisense.md)
+        - 2018-06-09 [快捷键大全](./Articles/Develop/tool/editors/VSCode/keyboard-shortcuts.md)
+        - 2018-06-06 [TypeScript 自带格式化配置](./Articles/Develop/tool/editors/VSCode/typescript-builtin-format-config.md)
+        - 2018-06-06 [让 JSX 后缀支持 Emmet](./Articles/Develop/tool/editors/VSCode/jsx-suffix-emmet-support.md)
+        - 2018-06-06 [Prettier Now 格式化配置](./Articles/Develop/tool/editors/VSCode/prettier-now-config.md)
+        - 2018-06-06 [Prettier 格式化配置](./Articles/Develop/tool/editors/VSCode/prettier-config.md)
       - __Atom__
-        - 2018-06-06 [让 JSX 后缀支持 Emmet](文章/开发/开发工具/编辑器/Atom/让%20JSX%20后缀支持%20Emmet.md)
-      - __Webstorm__
-        - 2018-04-01 [注册码](文章/开发/开发工具/编辑器/WebStorm/注册码.md)
+        - 2018-06-06 [让 JSX 后缀支持 Emmet](./Articles/Develop/tool/editors/Atom/jsx-suffix-emmet-support.md)
     - __GIT__
-      - TODO [Git Flow 工作流](文章/开发/开发工具/Git/Git%20Flow%20工作流.md)
-      - 2018-05-10 [修改 commit](文章/开发/开发工具/Git/修改%20commit.md)
-      - 2018-05-10 [变更作者](文章/开发/开发工具/Git/变更作者.md)
+      - TODO [Git Flow 工作流](./Articles/Develop/tool/Git/git-flow-workflow.md)
+      - 2018-05-10 [修改 commit](./Articles/Develop/tool/Git/modify-commit.md)
+      - 2018-05-10 [变更作者](./Articles/Develop/tool/Git/change-author.md)
     - __Webpack__
-      - 2018-06-10 [分析需求](文章/开发/开发工具/Webpack/需求分析.md)
+      - 2018-06-10 [分析需求](./Articles/Develop/tool/Webpack/requirements-analysis.md)
 
 - 日常
 
@@ -81,5 +76,3 @@
         - 无
 
     - [发现](./Daily/Discovery.md)
-
-

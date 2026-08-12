@@ -7,5 +7,3 @@
 - [软件架构系列](./Architecture/software-architecture/README.md)
 
 - [DDD](./Architecture/domain-driven-design/README.md)
-
-- [洋葱](./Architecture/onion-architecture/README.md)
