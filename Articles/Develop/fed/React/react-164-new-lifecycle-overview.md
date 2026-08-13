@@ -1,5 +1,10 @@
 # 16.4.0 生命周期一览和旧的生命周期回顾
 
+> **⚠️ 内容已过时**：本文介绍的是 React Class 组件的生命周期方法。这是一种历史遗留（legacy）写法，现代 React 推荐使用**函数组件 + Hooks**（如 `useEffect`）来替代生命周期方法。文中提到的 `UNSAFE_componentWillMount`、`UNSAFE_componentWillReceiveProps`、`UNSAFE_componentWillUpdate` 已在现代 React 版本中被标记为不推荐使用，并计划在未来的同步渲染模式之外移除。建议阅读：
+> - [React 官方文档 - 组件与 Hooks](https://react.dev/learn)
+> - [React 官方文档 - useEffect](https://react.dev/reference/react/useEffect)
+> - [Migrating from Class Components (React 官方博客)](https://react.dev/blog/2023/03/16/introducing-react-dev#going-all-in-on-modern-react-with-hooks)
+
 React 在 16.4.0 版本更新了两个生命周期, `getSnapshotBeforeUpdate` 和 `getDerivedStateFromProps`。
 
 在使用这两个生命周期时, 需要注意：
@@ -91,6 +96,7 @@ export default class App extends Component {
     // 组件挂载前
   }
 
+  // 已在现代 React 中移除（legacy，不要在新代码中使用）
   public UNSAFE_componentWillMount(): void {
     // 组件挂载前
   }
@@ -113,6 +119,7 @@ export default class App extends Component {
     // 组件更新前
   }
 
+  // 已在现代 React 中移除（legacy，不要在新代码中使用）
   public UNSAFE_componentWillUpdate(nextProps: object, nextState: object, nextContext: any): void {
     // 组件更新前
   }
@@ -125,6 +132,7 @@ export default class App extends Component {
     // 组件获得Props前
   }
 
+  // 已在现代 React 中移除（legacy，不要在新代码中使用）
   public UNSAFE_componentWillReceiveProps(nextProps: object, nextContext: any): void {
     // 组件获得Props前
   }

@@ -1,5 +1,7 @@
 TypeScript 配置选项
 
+> **⚠️ 部分配置项已过时**：截至本文更新时，TypeScript 最新版本为 **7.0.2**（2026-08-05 发布，参见 [TypeScript npm 页面](https://www.npmjs.com/package/typescript) 及 [TypeScript 7.0 GA 公告](https://devblogs.microsoft.com/typescript/)）。TypeScript 7.0 是基于 Go 原生编译器的重大版本，并沿用了 6.0 中收紧的严格默认值（如移除 `target: "es5"`、`moduleResolution: "node"`、`baseUrl` 等旧默认行为）。下文中标注"已弃用"/"已移除"的选项请勿在新项目中使用，具体见各选项旁的行内说明。
+
 tsconfig.json
 
 ```javascript
@@ -210,6 +212,8 @@ tsconfig.json
     //
 
     // 目录 ECMAScript 版本 <ES3|ES5|ES2015|ES2016|ES2017|ES2018|ESNEXT>
+    // 注：ES5 及更早目标已过时，现代项目建议使用 "ES2022" 或更高（或 "ESNext"），
+    // 具体以目标运行环境（Node.js LTS / 现代浏览器）的实际支持情况为准
     "target": "ES5",
 
     // 生成指定模块种类 <none|commonjs|amd|system|umd|es2015|ESNext>
@@ -217,6 +221,8 @@ tsconfig.json
     "module": "none",
 
     // 决定如何处理模块 <node|classic>
+    // 注："classic" 已弃用，仅为兼容 TypeScript 1.6 之前版本保留，不要在新项目中使用；
+    // 现代项目应使用 "bundler"（配合 Vite/webpack 等打包工具）或 "node16"/"nodenext"
     "moduleResolution": "classic",
 
     // 允许从没有设置默认导出的模块中默认导入
@@ -291,7 +297,8 @@ tsconfig.json
     // 让 ES3, ES5 支持 for of
     "downlevelIteration": false,
 
-    // 将'keyof'解析为字符串赋值的属性名称（无数字或符号）。   
+    // 将'keyof'解析为字符串赋值的属性名称（无数字或符号）。
+    // 注：该选项已在 TypeScript 5.0 中被彻底移除，配置后不再生效
     "keyofStringsOnly": false,
 
     // 保留 const 和 enum 声明

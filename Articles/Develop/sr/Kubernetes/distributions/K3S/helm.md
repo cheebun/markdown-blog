@@ -2,32 +2,15 @@
 
 ## 安装
 
-### 下载
+推荐使用官方安装脚本, 会自动获取最新版本 (撰写本文时为 `v4.2.3`)。
 
 ```bash
-wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod +x get_helm.sh
+./get_helm.sh
 ```
 
-### 解压
-
-```bash
-tar \
-  -zxvf helm-v3.7.1-linux-amd64.tar.gz \
-  --strip-components=1 \
-  linux-amd64/helm
-```
-
-### 添加权限
-
-```bash
-chmod +x helm
-```
-
-### 移动
-
-```
-mv helm /usr/local/bin
-```
+> Helm v4 已于 2026 年成为当前稳定版, v3 仍在维护中 (Bug 修复至 2026-07-08, 安全修复至 2026-11-11)。如需手动下载指定版本, 可前往 [Helm Releases](https://github.com/helm/helm/releases) 查看。
 
 <br />
 <br />
@@ -39,7 +22,7 @@ mv helm /usr/local/bin
 ```bash
 helm repo add gitlab        https://charts.gitlab.io
 helm repo add metallb      	https://metallb.github.io/metallb
-helm repo add traefik      	https://containous.github.io/traefik-helm-chart
+helm repo add traefik      	https://traefik.github.io/charts
 helm repo add jetstack      https://charts.jetstack.io
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo add stable       	https://charts.helm.sh/stable

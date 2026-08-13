@@ -4,9 +4,11 @@
 
 ```bash
 wget https://raw.githubusercontent.com/k3s-io/k3s/master/install.sh
-wget https://github.com/k3s-io/k3s/releases/download/v1.22.2%2Bk3s2/k3s
-wget https://github.com/k3s-io/k3s/releases/download/v1.22.2%2Bk3s2/k3s-airgap-images-amd64.tar
+wget https://github.com/k3s-io/k3s/releases/download/v1.36.3%2Bk3s1/k3s
+wget https://github.com/k3s-io/k3s/releases/download/v1.36.3%2Bk3s1/k3s-airgap-images-amd64.tar
 ```
+
+> 版本请以 [k3s releases](https://github.com/k3s-io/k3s/releases) 页面为准, 此处以 `v1.36.3+k3s1` 为例。
 
 复制镜像到指定目录
 
@@ -31,9 +33,11 @@ K3S_KUBECONFIG_OUTPUT="/root/.kube/config" \
 INSTALL_K3S_SKIP_DOWNLOAD=true \
 INSTALL_K3S_CHANNEL=stable \
 KUBE_PROXY_MODE="ipvs" \
-INSTALL_K3S_EXEC="--no-deploy traefik --no-deploy servicelb" \
+INSTALL_K3S_EXEC="--disable=traefik --disable=servicelb" \
 ./install.sh
 ```
+
+> `--no-deploy` 参数已在 k3s v1.24 中移除, 现使用 `--disable` 替代。
 
 ```bash
 K3S_NODE_NAME="node" \

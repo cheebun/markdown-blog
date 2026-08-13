@@ -72,7 +72,7 @@ brew install nvm
 cat << EOF >> $HOME/.zprofile
 
 # NVM
-export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
+export NVM_NODEJS_ORG_MIRROR="https://npmmirror.com/mirrors/node/"
 export NVM_DIR="\$HOME/.nvm"
 [ -s "\$(brew --prefix nvm)/nvm.sh" ] && . "\$(brew --prefix nvm)/nvm.sh"
 [ -s "\$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "\$(brew --prefix nvm)/etc/bash_completion.d/nvm"
@@ -86,7 +86,7 @@ source $HOME/.zprofile
 ```bash
 nvm install --lts
 nvm install stable
-nvm alias default lts/gallium
+nvm alias default lts/krypton
 ```
 
 ### 字体

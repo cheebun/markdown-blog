@@ -34,4 +34,4 @@ yarn version --patch --no-git-tag-version --no-commit-hooks
 
 ## 参考
 
-[yarn version](https://yarnpkg.com/lang/en/docs/cli/version/)
+[yarn version](https://classic.yarnpkg.com/lang/en/docs/cli/version/)

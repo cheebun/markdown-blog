@@ -49,8 +49,10 @@ brew tap --custom-remote --force-auto-update homebrew/core         https://mirro
 brew tap --custom-remote --force-auto-update homebrew/cask         https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
 brew tap --custom-remote --force-auto-update homebrew/cask-fonts   https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git
 brew tap --custom-remote --force-auto-update homebrew/cask-drivers https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git
-brew tap --custom-remote --force-auto-update homebrew/services     https://hub.fastgit.xyz/Homebrew/homebrew-services.git
+brew tap --custom-remote --force-auto-update homebrew/services     https://github.com/Homebrew/homebrew-services.git
 ```
+
+（`hub.fastgit.xyz` 镜像已失效，`homebrew/services` 暂无可用国内镜像，直接使用官方地址即可。）
 
 &nbsp;
 
@@ -79,6 +81,8 @@ brew search wget
 ## Cakebrew
 
 Homebrew 管理 App, 一个图形化的 Homebrew 管理工具。
+
+> 注意：Cakebrew 已停止维护，最后一个版本发布于 2021 年，仅作为可选的图形化工具参考。
 
 ### 安装 Cakebrew
 

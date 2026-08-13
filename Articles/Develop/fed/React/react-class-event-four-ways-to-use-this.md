@@ -1,5 +1,9 @@
 # React class 中的事件 4 种使用 this 的方法
 
+> **⚠️ 内容已过时**：本文针对的是 React Class 组件中的 `this` 绑定问题。这是历史遗留（legacy）写法，现代 React 推荐使用**函数组件 + Hooks**，函数组件不存在 `this` 绑定问题，因此本文所述场景已不再适用于新项目。建议阅读：
+> - [React 官方文档 - 组件与 Hooks](https://react.dev/learn)
+> - [React 官方文档 - 使用状态响应输入](https://react.dev/learn/responding-to-events)
+
 ## React 两种 bind 方式
 
 ### 构造函数内绑定

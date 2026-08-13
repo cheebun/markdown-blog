@@ -14,7 +14,7 @@ npm_config_registry=<npmRegistry> npx <command>
 例:
 
 ```bash
-npm_config_registry=https://registry.npm.taobao.org npx @vue/cli
+npm_config_registry=https://registry.npmmirror.com npx @vue/cli
 ```
 
 ## 其它源

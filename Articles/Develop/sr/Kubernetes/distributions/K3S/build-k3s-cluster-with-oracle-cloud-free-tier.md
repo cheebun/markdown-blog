@@ -43,7 +43,7 @@ curl -sfL https://get.k3s.io |  \
   K3S_KUBECONFIG_MODE="0644"   \
   K3S_KUBECONFIG_OUTPUT="/root/.kube/config"   \
   INSTALL_K3S_CHANNEL="latest"   \
-  INSTALL_K3S_EXEC="--disable-cloud-controller --kube-controller-manager-arg cloud-provider=external --kubelet-arg cloud-provider=external --kubelet-arg provider-id=ocid1.instance.oc1.ap-chuncheon-1.an4w4ljrikpf5ayczg363a3mub2e37jxzx3hke67mj5svnn3fiaodexn5e3q --container-runtime-endpoint unix:///run/containerd/containerd.sock --no-deploy traefik,servicelb --tls-san $(curl -sSL ido.al)"   \
+  INSTALL_K3S_EXEC="--disable-cloud-controller --kube-controller-manager-arg cloud-provider=external --kubelet-arg cloud-provider=external --kubelet-arg provider-id=ocid1.instance.oc1.ap-chuncheon-1.an4w4ljrikpf5ayczg363a3mub2e37jxzx3hke67mj5svnn3fiaodexn5e3q --container-runtime-endpoint unix:///run/containerd/containerd.sock --disable=traefik,servicelb --tls-san $(curl -sSL ido.al)"   \
   sh -
 ```
 
@@ -52,8 +52,10 @@ curl -sfL https://get.k3s.io |  \
   K3S_KUBECONFIG_MODE="0644"   \
   K3S_KUBECONFIG_OUTPUT="/root/.kube/config"   \
   INSTALL_K3S_CHANNEL="latest"   \
-  INSTALL_K3S_EXEC="--disable-cloud-controller --kube-controller-manager-arg cloud-provider=external --kubelet-arg cloud-provider=external --kubelet-arg provider-id=ocid1.instance.oc1.ap-chuncheon-1.an4w4ljrikpf5ayczg363a3mub2e37jxzx3hke67mj5svnn3fiaodexn5e3q --no-deploy traefik,servicelb --tls-san $(curl -sSL ido.al)"   \
+  INSTALL_K3S_EXEC="--disable-cloud-controller --kube-controller-manager-arg cloud-provider=external --kubelet-arg cloud-provider=external --kubelet-arg provider-id=ocid1.instance.oc1.ap-chuncheon-1.an4w4ljrikpf5ayczg363a3mub2e37jxzx3hke67mj5svnn3fiaodexn5e3q --disable=traefik,servicelb --tls-san $(curl -sSL ido.al)"   \
   sh -
+
+> `--no-deploy` 参数已在 k3s v1.24 中移除, 现使用 `--disable` 替代。
 
 ### 提示
 

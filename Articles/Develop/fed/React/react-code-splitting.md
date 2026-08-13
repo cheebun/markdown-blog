@@ -59,76 +59,10 @@ const App = memo(function App() {
 export default App;
 ```
 
-## Loadable
-
-```javascript
-import React, { memo } from 'react';
-
-const Loading = memo(function Loading({ error, retry, pastDelay, timedOut }) {
-  if (error) {
-    return <div>Error! <button onClick={retry}>Retry</button></div>;
-  }
-
-  if (pastDelay) {
-    return <div>Loading...</div>;
-  }
-
-  if (timedOut) {
-    return <div>Taking a long time... <button onClick={retry}>Retry</button></div>;
-  }
-
-  return null;
-});
-
-export default Loading;
-```
-
-```javascript
-import ReactLoadable from 'react-loadable';
-import Loading from '@/components/Loading';
-
-function Loadable(options) {
-  const defaultOptions = {
-    loading: Loading,
-    delay: 200,
-    timeout: 10000,
-  }
-
-  return ReactLoadable({ ...defaultOptions, ...options });
-}
-
-export default Loadable;
-```
-
-```javascript
-import Loadable from '@/components/helpers/Loadable';
-import Home from "@/pages/home";
-
-const routes = [
-  {
-    name: "首页",
-    path: "/",
-    component: Home,
-    exact: true, // 精确匹配
-    strict: true, // 严格路由
-    tabbar: true, // 标签栏
-  },
-  {
-    name: "发现",
-    path: "/discover",
-    component: Loadable({ loader: () => import('@/pages/discover') }),
-    exact: true, // 精确匹配
-    strict: true, // 严格路由
-    tabbar: true, // 标签栏
-  },
-];
-
-export default routes;
-```
+> 注：`react-loadable` 已于 2020 年停止维护（archived），已被 `React.lazy` + `Suspense` 取代，无需再引入该第三方库。
 
 ## 参考
 
-[How do I avoid repetition?](https://github.com/jamiebuilds/react-loadable#how-do-i-avoid-repetition)    
 [Route-based code splitting](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting)    
 [React 16的异常处理 - componentDidCatch](https://github.com/Acgsior/Acgsior/blob/master/source/_posts/react-16-error-handling.md)    
 [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)    

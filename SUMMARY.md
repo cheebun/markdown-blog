@@ -6,8 +6,6 @@
 
         - TODO [接口](./Articles/Develop/fed/TypeScript/interface.md)
 
-        - 2022-02-17 [React Suspense Concurrent Mode 在 Typescript 下不工作](./Articles/Develop/fed/React/react-suspense-concurrent-mode-not-working-under-typescript.md)
-
         - 2022-02-17 [TypeScript 为函数声明静态属性](./Articles/Develop/fed/TypeScript/typescript-declares-static-properties-for-functions.md)
 
         - 2018-06-08 [函数参数 null 处理方法](./Articles/Develop/fed/TypeScript/handling-method-when-function-parameter-is-null.md)
@@ -56,8 +54,6 @@
         - 2018-06-06 [让 JSX 后缀支持 Emmet](./Articles/Develop/tool/editors/VSCode/jsx-suffix-emmet-support.md)
         - 2018-06-06 [Prettier Now 格式化配置](./Articles/Develop/tool/editors/VSCode/prettier-now-config.md)
         - 2018-06-06 [Prettier 格式化配置](./Articles/Develop/tool/editors/VSCode/prettier-config.md)
-      - __Atom__
-        - 2018-06-06 [让 JSX 后缀支持 Emmet](./Articles/Develop/tool/editors/Atom/jsx-suffix-emmet-support.md)
     - __GIT__
       - TODO [Git Flow 工作流](./Articles/Develop/tool/Git/git-flow-workflow.md)
       - 2018-05-10 [修改 commit](./Articles/Develop/tool/Git/modify-commit.md)

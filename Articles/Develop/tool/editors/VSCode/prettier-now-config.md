@@ -1,93 +1,33 @@
-# VSCode Prettier Now 格式化配置
+# VSCode Prettier Now 格式化配置（已废弃）
 
-## 规则读取顺序
+> `Prettier Now` 扩展已停止维护, 且下方配置项（`prettier.*` 系列设置）在当前 VSCode 中已全部失效。
+> 请改用官方扩展 [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)（`esbenp.prettier-vscode`）, 并通过项目根目录下的 `.prettierrc` 文件配置规则, 参见 [prettier-config.md](./prettier-config.md)。
 
-直接读取 `VSCode Prettier Setting`, 可能, 不会读取 `.editorconfig`.
+## 迁移方式
 
-目前所知道, Prettier Now 是根本不会去读取 `.prettierrc` 的。
-
-## 配置
+1. 卸载 `Prettier Now`, 安装 `esbenp.prettier-vscode`（当前 Prettier 稳定版为 3.9.6, 来源: [npm](https://www.npmjs.com/package/prettier)）。
+2. VSCode 设置中仅保留:
 
 ```javascript
 {
-  // 保存格式化
   "editor.formatOnSave": true,
-
-  // 140 个字符后折行
-  "prettier.printWidth": 140,
-
-  // 单引号
-  "prettier.singleQuote": true,
-
-  // 尾随逗号 <none, es5, all>
-  "prettier.trailingComma": "none",
-
-  // Tab 宽
-  "prettier.tabWidth": 2,
-
-  // 使用制表符 true 制表符 / false 空格
-  "prettier.useTabs": false,
-
-  // 括号添加空格
-  "prettier.bracketSpacing": false,
-
-  // 箭头函数参数始终放置圆括号
-  "prettier.arrowParens": false,  
-
-  // JSX. 把>放置在最后一行末尾
-  "prettier.jsxBracketSameLine": false,
-
-  // 语句末尾添加分号
-  "prettier.semi": true,
-
-  // 箭头函数参数始终放置圆括号 <true|false>
-  "prettier.arrowParens": true,
-
-  // 括号
-  "prettier.bracesSpacing": true,
-
-  // 数组展开
-  "prettier.arrayExpand": false,                                                                
-  // JSX 单引号
-  "prettier.jsxSingleQuote": true,
-
-  // 更好的错误信息输出
-  "prettier.openOutput": true，
-
-  // 匿名函数省略空格
-  "prettier.noSpaceEmptyFn": false,
-
-  // 函数括号前始终插入空格
-  "prettier.spaceBeforeFunctionParen": false,
-
-  // 三元运算
-  "prettier.flattenTernaries": false,
-
-  // 允许属性名和值断行
-  "prettier.breakProperty": false,
-
-  // else放置在新行
-  "prettier.breakBeforeElse": false,
-
-  // 滚动到错误行
-  "prettier.autoScroll": true,
-
-  // 对齐冒号
-  "prettier.alignObjectProperties": false,
-
-  // 样式文件启用
-  "prettier.cssEnable": ["css", "less", "scss", "postcss"],
-
-  // GraphQL
-  "prettier.graphqlEnable": ["graphql"],
-
-  // JavaScript 启用
-  "prettier.javascriptEnable": [],
-
-  // JSON启用
-  "prettier.jsonEnable": ["json"],
-
-  // TypeScript
-  "prettier.typescriptEnable": [],  
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
+
+3. 在项目根目录新增 `.prettierrc`, 按原配置意图迁移:
+
+```json
+{
+  "printWidth": 140,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "semi": true,
+  "trailingComma": "none",
+  "arrowParens": "always",
+  "bracketSpacing": false
+}
+```
+
+字段与旧版 `prettier.*` 设置的对应关系: `printWidth` ← `prettier.printWidth`, `singleQuote` ← `prettier.singleQuote`, `trailingComma` ← `prettier.trailingComma`, `tabWidth`/`useTabs` ← `prettier.tabWidth`/`prettier.useTabs`, `semi` ← `prettier.semi`, `arrowParens` ← `prettier.arrowParens`, `bracketSpacing` ← `prettier.bracketSpacing`。
