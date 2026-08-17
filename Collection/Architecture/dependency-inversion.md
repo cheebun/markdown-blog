@@ -16,8 +16,7 @@
 
 ```typescript
 /**
- * @author microld
- * @desc 福特汽车厂商提供的接口
+ * 福特汽车厂商提供的接口
  */
 class FordCar {
   public run(): void {
@@ -34,8 +33,7 @@ class FordCar {
 }
 
 /**
- * @author microld
- * @desc 本田汽车厂商提供的接口
+ * 本田汽车厂商提供的接口
  */
 class HondaCar {
     public run(): void {
@@ -51,14 +49,15 @@ class HondaCar {
     }
 }
 
-enum CarType {
-  Ford, 
-  Honda
-}
+const CarType = {
+  FORD: "ford",
+  HONDA: "honda",
+} as const;
+
+type CarType = (typeof CarType)[keyof typeof CarType];
 
 /**
- * @author microld
- * @desc 自动驾驶系统
+ * 自动驾驶系统
  */
 class AutoDriver {    
   private hondaCar: HondaCar = new HondaCar();
@@ -68,7 +67,7 @@ class AutoDriver {
   public constructor(private type: CarType) {}
 
   public runCar(): void {
-    if (this.type == CarType.Ford) {
+    if (this.type === CarType.FORD) {
       this.fordCar.run();
     } else {
       this.hondaCar.run();
@@ -76,7 +75,7 @@ class AutoDriver {
   }
 
   public turnCar(): void {
-    if (this.type == CarType.Ford) {
+    if (this.type === CarType.FORD) {
       this.fordCar.turn();
     } else {
       this.hondaCar.turn();
@@ -84,7 +83,7 @@ class AutoDriver {
   }
 
   public stopCar(): void {
-    if (this.type == CarType.Ford) {
+    if (this.type === CarType.FORD) {
       this.fordCar.stop();
     } else {
       this.hondaCar.stop();
@@ -96,17 +95,18 @@ class AutoDriver {
 自动驾驶系统运转良好，很快，奥迪和奔驰以及宝马纷纷找到陀螺寻求合作，陀螺不得不把代码改成这个样子。
 
 ```typescript
-enum CarType {
-  Ford, 
-  Honda,
-  Audi, 
-  Benz, 
-  Bmw
-}
+const CarType = {
+  FORD: "ford",
+  HONDA: "honda",
+  AUDI: "audi",
+  BENZ: "benz",
+  BMW: "bmw",
+} as const;
+
+type CarType = (typeof CarType)[keyof typeof CarType];
 
 /**
- * @author microld
- * @desc 自动驾驶系统
+ * 自动驾驶系统
  */
 class AutoDriver {    
   private hondaCar: HondaCar = new HondaCar();
@@ -122,13 +122,13 @@ class AutoDriver {
   public constructor(private type: CarType) {}
 
   public runCar(): void {
-    if (this.type === CarType.Ford) {
+    if (this.type === CarType.FORD) {
       this.fordCar.run();
-    } else if (this.type === CarType.Honda) {
+    } else if (this.type === CarType.HONDA) {
       this.hondaCar.run();
-    } else if (this.type === CarType.Audi) {
+    } else if (this.type === CarType.AUDI) {
       this.audiCar.run();
-    } else if (this.type === CarType.Benz) {
+    } else if (this.type === CarType.BENZ) {
       this.benzCar.run();
     } else {
       this.bmwCar.run();
@@ -136,13 +136,13 @@ class AutoDriver {
   }
 
   public turnCar(): void {
-    if (this.type === CarType.Ford) {
+    if (this.type === CarType.FORD) {
       this.fordCar.turn();
-    } else if (this.type === CarType.Honda) {
+    } else if (this.type === CarType.HONDA) {
       this.hondaCar.turn();
-    } else if (this.type === CarType.Audi) {
+    } else if (this.type === CarType.AUDI) {
       this.audiCar.turn();
-    } else if (this.type === CarType.Benz) {
+    } else if (this.type === CarType.BENZ) {
       this.benzCar.turn();
     } else {
       this.bmwCar.turn();
@@ -150,13 +150,13 @@ class AutoDriver {
   }
 
   public stopCar(): void {
-    if (this.type === CarType.Ford) {
+    if (this.type === CarType.FORD) {
       this.fordCar.stop();
-    } else if (this.type === CarType.Honda) {
+    } else if (this.type === CarType.HONDA) {
       this.hondaCar.stop();
-    } else if (this.type === CarType.Audi) {
+    } else if (this.type === CarType.AUDI) {
       this.audiCar.stop();
-    } else if (this.type === CarType.Benz) {
+    } else if (this.type === CarType.BENZ) {
       this.benzCar.stop();
     } else {
       this.bmwCar.stop();
@@ -181,7 +181,7 @@ class AutoDriver {
 
 ```typescript
 /**
- * @desc 抽象的汽车接口，由自动驾驶系统定义标准
+ * 抽象的汽车接口，由自动驾驶系统定义标准
  */
 interface ICar {
   run(): void;
@@ -190,7 +190,7 @@ interface ICar {
 }
 
 /**
- * @desc 福特汽车厂商提供的实现
+ * 福特汽车厂商提供的实现
  */
 class FordCar implements ICar {
   public run(): void {
@@ -207,7 +207,7 @@ class FordCar implements ICar {
 }
 
 /**
- * @desc 本田汽车厂商提供的实现
+ * 本田汽车厂商提供的实现
  */
 class HondaCar implements ICar {
   public run(): void {
@@ -224,7 +224,7 @@ class HondaCar implements ICar {
 }
 
 /**
- * @desc 奥迪汽车厂商提供的实现
+ * 奥迪汽车厂商提供的实现
  */
 class AudiCar implements ICar {
   public run(): void {
@@ -241,7 +241,7 @@ class AudiCar implements ICar {
 }
 
 /**
- * @desc 奔驰汽车厂商提供的实现
+ * 奔驰汽车厂商提供的实现
  */
 class BenzCar implements ICar {
   public run(): void {
@@ -258,7 +258,7 @@ class BenzCar implements ICar {
 }
 
 /**
- * @desc 宝马汽车厂商提供的实现
+ * 宝马汽车厂商提供的实现
  */
 class BmwCar implements ICar {
   public run(): void {
@@ -275,7 +275,7 @@ class BmwCar implements ICar {
 }
 
 /**
- * @desc 自动驾驶系统，只依赖抽象 ICar
+ * 自动驾驶系统，只依赖抽象 ICar
  */
 class AutoDriver {
   public constructor(private car: ICar) {}
