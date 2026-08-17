@@ -57,7 +57,7 @@
 
     - [iptables](./Articles/Develop/sr/iptables.md)
 
-    - [内网 IP 段](./Articles/Develop/sr/private-ip-ranges.md)
+    - [私有与保留 IP 地址段（IPv4/IPv6）](./Articles/Develop/sr/private-and-reserved-ip-ranges.md)
 
     - __Kubernetes__
 
